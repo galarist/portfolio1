@@ -4,10 +4,15 @@
 
 body {
   background-color: #faf4e6;
+  background-color: #fdfdfd;
   max-width: 100%;
   height: 100%;
   margin: 15px;
+  font-family: 'Nunito', sans-serif;
+  color: hsl(0,0%,40%);
 }
+
+@media only screen and (min-width: 1440px)/* and (max-width: 1920px) */{
 
 header{
   height: 420px;
@@ -16,6 +21,8 @@ header{
   -webkit-box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.15);
   -moz-box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.15);
   box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.15);
+  display: flex;
+  justify-content: center;
 }
 
 .bg-box {
@@ -30,13 +37,18 @@ header{
 
 nav {
   height: 70px;
-  width: 90%;
-  margin: auto;
+  width: 99%;
+  position: fixed;
   /*background-color: rgba(25, 66, 84, 0.9);*/
-  border-radius: 2px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  z-index: 2;
+  padding-right: 15px;
+  background-color: rgba(154, 213, 237, 0.9);
+  -webkit-box-shadow: 0px 10px 11px -7px rgba(64,64,64,0.55);
+  -moz-box-shadow: 0px 10px 11px -7px rgba(64,64,64,0.55);
+  box-shadow: 0px 10px 11px -7px rgba(64,64,64,0.55);
 }
 
 .page-title {
@@ -47,7 +59,6 @@ nav {
     border-top: none;
     background-color: #111;
      color: transparent;
-     text-shadow: 0px 2px 3px rgba(255,255,255,0.5);
      -webkit-background-clip: text;
         -moz-background-clip: text;
              background-clip: text;
@@ -69,6 +80,8 @@ main {
   border-right: 4px solid rgb(120, 200, 235);
   border-left: 4px solid rgb(120, 200, 235);
   z-index: 1 !important;
+  background-color: rgb(250, 244, 230);
+  background-color: #fdfdfd;
 }
 
 .card {
@@ -77,10 +90,11 @@ main {
   box-shadow: 0px 20px 40px 0px rgba(0,0,0,0.15);
   max-width: 300px;
   background-color: #ececec;
+  background-color: #faf4e6;
+  background-color: #fdfdfd;
   text-align: center;
-  font-family: arial;
   border-radius: 4px;
-  margin: -80px auto 6px 24px;
+  margin: -30px auto 6px 24px;
   border-left: 4px solid rgb(120, 200, 235);
   border-right: 4px solid rgb(120, 200, 235);
   border-bottom: 4px solid rgb(120, 200, 235);
@@ -89,17 +103,20 @@ main {
   -o-transition: box-shadow 0.4s ease-out;
   transition: box-shadow 0.4s ease-out;
   float: left;
+  z-index: 6 !important;
 }
 
 .box-title {
   max-width: 500px;
   height: 60px;
   background-color: #ececec;
+  background-color: #faf4e6;
+  background-color: #fdfdfd;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: arial;
+  font-weight: 600;
   border-radius: 4px;
   margin: -30px auto 6px auto;
   -webkit-box-shadow: 0px 20px 40px 0px rgba(0,0,0,0.15);
@@ -112,6 +129,8 @@ main {
   border-left: 4px solid rgb(120, 200, 235);
   border-right: 4px solid rgb(120, 200, 235);
   border-bottom: 4px solid rgb(120, 200, 235);
+  width: 500px;
+  z-index: 3;
 }
 
 .card:hover, .box-title:hover {
@@ -132,6 +151,7 @@ main {
 .title {
   color: grey;
   font-size: 18px;
+  font-weight: 600;
 }
 
 button {
@@ -140,6 +160,7 @@ button {
   display: inline-block;
   padding: 8px;
   color: white;
+  color: #fdfdfd;
   background-color: #000;
   text-align: center;
   cursor: pointer;
@@ -172,11 +193,14 @@ button:hover, a:hover {
   display: block;
   color: rgb(23, 27, 29);
   text-align: center;
-  height: 35px;
+  height: 40px;
   padding: 5px 16px;
   margin: 0 4px;
   text-decoration: none;
   border-radius: 2px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
 }
 
 .list-nav a:hover:not(.active) {
@@ -186,7 +210,8 @@ button:hover, a:hover {
 
 .active {
   background-color: #111;
-  color: white !important;
+  color: white ;
+  color: #fdfdfd !important;
 }
 
 .active:hover {
@@ -198,10 +223,12 @@ background-color: #363434;
   color: transparent;
   display: initial;
   text-align: center;
-  text-shadow: 0px 2px 3px rgba(255,255,255,0.5);
   -webkit-background-clip: text;
     -moz-background-clip: text;
       background-clip: text;
+      display: block;
+      margin: auto;
+      padding: 0 3px;
 }
 
 .intro {
@@ -212,8 +239,6 @@ background-color: #363434;
   align-content: center;
   justify-content: center;
   background-color: #565656;
-   color: transparent;
-   text-shadow: 0px 2px 3px rgba(255,255,255,0.5);
    -webkit-background-clip: text;
       -moz-background-clip: text;
            background-clip: text;
@@ -221,8 +246,6 @@ background-color: #363434;
 
 .title-box {
   background-color: #565656;
-  color: transparent;
-  text-shadow: 0px 2px 3px rgba(255,255,255,0.5);
   -webkit-background-clip: text;
     -moz-background-clip: text;
          background-clip: text;
@@ -319,7 +342,6 @@ background-color: #363434;
 .chart-title {
   background-color: #565656;
   color: transparent;
-  text-shadow: 0px 2px 3px rgba(255,255,255,0.5);
   -webkit-background-clip: text;
     -moz-background-clip: text;
          background-clip: text;
@@ -350,6 +372,7 @@ footer {
 	position: relative;
 	line-height: 2em;
 	padding: 30px 0;
+  display: none;
 }
 
 #skill .list-bars {
@@ -369,7 +392,6 @@ footer {
 	top: 8px;
   background-color: #565656;
     color: transparent;
-    text-shadow: 0px 2px 3px rgba(255,255,255,0.5);
     -webkit-background-clip: text;
       -moz-background-clip: text;
            background-clip: text;
@@ -453,3 +475,5 @@ footer {
 @-webkit-keyframes html-css        { 0%  { width:0px; } 100%{ width:90%; } }
 @-webkit-keyframes jquery      { 0%  { width:0px; } 100%{ width:65%; } }
 @-webkit-keyframes wordpress   { 0%  { width:0px; } 100%{ width:80%; } }
+
+}
